@@ -1,0 +1,3 @@
+- Recursively pull all git repos in subdirectories with PowerShell:
+
+`Get-ChildItem -Directory -Force -Recurse *.git | ForEach-Object { cd $_.Parent.FullName; Write-Host $_.Parent.FullName; git pull }`
